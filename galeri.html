@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeri - Kelurahan Karanganom</title>
+    <title>Galeri - Kecamatan Karanganom</title>
+
+    <!-- Ikon Tab Browser -->
+    <link rel="shortcut icon" href="assets/logo.png" type="image/png">
+
     <style>
         * {
             box-sizing: border-box;
@@ -14,9 +18,11 @@
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
             background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        /* Header yang Responsif */
         header {
             background-color: #004d40;
             color: white;
@@ -58,11 +64,11 @@
             white-space: nowrap;
         }
 
-        /* Konten Galeri */
         .content {
             padding: 40px 20px;
             max-width: 1100px;
             margin: 0 auto;
+            flex: 1;
         }
 
         h1 {
@@ -92,7 +98,6 @@
             transform: scale(1.03);
         }
 
-        /* Modal */
         #modalGaleri {
             display: none;
             position: fixed;
@@ -112,7 +117,14 @@
             border-radius: 8px;
         }
 
-        /* Responsif HP */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #004d40;
+            color: white;
+            margin-top: 40px;
+        }
+
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -131,8 +143,8 @@
 
     <header>
         <div class="header-left">
-            <img src="image/logo jadi.png" alt="Logo">
-            <h2>Kelurahan Karanganom</h2>
+            <img src="assets/logo.png" alt="Logo">
+            <h2>Kecamatan Karanganom</h2>
         </div>
         <nav>
             <a href="index.html">Beranda</a>
@@ -154,6 +166,10 @@
     </div>
 
     <div id="modalGaleri" onclick="tutupModal()"><img id="imgModal"></div>
+
+    <footer>
+        <p>&copy; 2026 Kecamatan Karanganom. Seluruh hak cipta dilindungi.</p>
+    </footer>
 
     <script>
         function bukaModal(src) { document.getElementById('modalGaleri').style.display = 'flex'; document.getElementById('imgModal').src = src; }
