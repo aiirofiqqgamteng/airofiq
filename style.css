@@ -57,6 +57,11 @@ header {
     line-height: 50px;
 }
 
+nav {
+    display: flex;
+    align-items: center;
+}
+
 nav a {
     color: #ffffff;
     text-decoration: none;
@@ -155,8 +160,8 @@ nav a:hover {
 /* --- 5. FOTO KEGIATAN --- */
 .kegiatan-item img,
 .card-large img {
-    width: 250px !important;
-    height: 150px !important;
+    width: 100% !important;
+    height: 200px !important;
     object-fit: cover;
     border-radius: 10px;
     display: block;
@@ -192,11 +197,12 @@ footer {
     margin-top: 50px;
 }
 
-/* --- 8. RESPONSIVE MEDIA QUERY (KHUSUS HP) --- */
+/* --- 8. RESPONSIVE MEDIA QUERY (BAGIAN INI YANG DIPERBAIKI) --- */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
+        padding: 15px;
     }
 
     nav {
@@ -204,14 +210,21 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px 20px;
+        width: 100%;
     }
 
     nav a {
         margin-left: 0 !important;
         font-size: 14px;
+        white-space: nowrap;
     }
 
     .hero-text h1 {
         font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+        text-align: center;
     }
 }
