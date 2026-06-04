@@ -1,15 +1,15 @@
 // ==========================
-// WEBSITE KELURAHAN KARANGANOM
+// WEBSITE KECAMATAN KARANGANOM
 // ==========================
 
 // Tombol Informasi
 function salam() {
-    alert("Selamat Datang di Website Resmi Kelurahan Karanganom");
+    alert("Selamat Datang di Website Resmi Kecamatan Karanganom");
 }
 
 // Website berhasil dimuat
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("Website Kelurahan Karanganom Berhasil Dimuat");
+    console.log("Website Kecamatan Karanganom Berhasil Dimuat");
 
     tampilkanWaktu();
     setInterval(tampilkanWaktu, 1000);
@@ -43,59 +43,6 @@ function tampilkanWaktu() {
 }
 
 // ==========================
-// HEADER SCROLL
-// ==========================
-window.addEventListener("scroll", function () {
-    const header = document.querySelector("header");
-
-    if (window.scrollY > 50) {
-        header.style.background = "#006400";
-        header.style.boxShadow = "0 2px 10px rgba(0,0,0,0.3)";
-    } else {
-        header.style.background = "#228B22";
-        header.style.boxShadow = "none";
-    }
-});
-
-// ==========================
-// TOMBOL KEMBALI KE ATAS
-// ==========================
-const tombolAtas = document.createElement("button");
-
-tombolAtas.innerHTML = "↑";
-tombolAtas.id = "btnAtas";
-
-document.body.appendChild(tombolAtas);
-
-tombolAtas.style.position = "fixed";
-tombolAtas.style.bottom = "20px";
-tombolAtas.style.right = "20px";
-tombolAtas.style.width = "50px";
-tombolAtas.style.height = "50px";
-tombolAtas.style.border = "none";
-tombolAtas.style.borderRadius = "50%";
-tombolAtas.style.background = "#228B22";
-tombolAtas.style.color = "white";
-tombolAtas.style.fontSize = "22px";
-tombolAtas.style.cursor = "pointer";
-tombolAtas.style.display = "none";
-
-window.addEventListener("scroll", function () {
-    if (window.scrollY > 300) {
-        tombolAtas.style.display = "block";
-    } else {
-        tombolAtas.style.display = "none";
-    }
-});
-
-tombolAtas.addEventListener("click", function () {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-});
-
-// ==========================
 // ANIMASI HERO TEXT
 // ==========================
 window.addEventListener("load", function () {
@@ -115,7 +62,7 @@ window.addEventListener("load", function () {
 // TEKS BERGANTI OTOMATIS
 // ==========================
 const pesan = [
-    "Website Resmi Kelurahan Karanganom",
+    "Website Resmi Kecamatan Karanganom",
     "Pelayanan Cepat dan Transparan",
     "Bersama Membangun Karanganom Maju"
 ];
