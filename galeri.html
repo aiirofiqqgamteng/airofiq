@@ -1,117 +1,46 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeri - Kelurahan Karanganom</title>
     <style>
-        /* Pengaturan Dasar */
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #f4f4f4;
-        }
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #f4f4f4; }
 
-        /* Header */
-        header {
-            background-color: #004d40;
-            color: white;
-            padding: 15px 50px;
-            display: flex;
-            align-items: center;
-        }
-
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .header-left img {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-        }
-
-        .header-left h2 {
-            margin: 0;
-            font-size: 22px;
-            color: white;
-            line-height: 50px;
-        }
-
-        nav {
-            margin-left: auto;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 25px;
-            font-weight: 600;
-        }
+        /* Header yang Responsif */
+        header { background-color: #004d40; color: white; padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+        .header-left { display: flex; align-items: center; gap: 15px; }
+        .header-left img { width: 50px; height: 50px; object-fit: contain; border-radius: 5px; }
+        .header-left h2 { margin: 0; font-size: 20px; }
+        
+        nav { display: flex; flex-wrap: wrap; gap: 15px; }
+        nav a { color: white; text-decoration: none; font-weight: 600; white-space: nowrap; }
 
         /* Konten Galeri */
-        .content {
-            padding: 40px 50px;
-        }
+        .content { padding: 40px 20px; max-width: 1100px; margin: 0 auto; }
+        h1 { font-size: 28px; color: #333; margin-bottom: 20px; text-align: center; }
 
-        h1 {
-            font-size: 32px;
-            color: #333;
-            margin-bottom: 30px;
-        }
+        .galeri-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .galeri-item img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); cursor: pointer; transition: 0.3s; }
+        .galeri-item img:hover { transform: scale(1.03); }
 
-        /* Grid Foto */
-        .galeri-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 20px;
-        }
+        /* Modal */
+        #modalGaleri { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; }
+        #imgModal { max-width: 90%; max-height: 90%; border-radius: 8px; }
 
-        .galeri-item img {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-            cursor: pointer;
-        }
-
-        .galeri-item img:hover {
-            transform: scale(1.03);
-        }
-
-        /* --- STYLING MODAL (FITUR KLIK FOTO) --- */
-        #modalGaleri {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.85);
-            align-items: center;
-            justify-content: center;
-        }
-
-        #imgModal {
-            max-width: 85%;
-            max-height: 85%;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        /* Responsif HP */
+        @media (max-width: 768px) {
+            header { flex-direction: column; text-align: center; gap: 15px; }
+            nav { justify-content: center; }
         }
     </style>
 </head>
-
 <body>
 
     <header>
         <div class="header-left">
-            <img src="image/logo jadi.png" alt="Logo Kelurahan">
+            <img src="image/logo jadi.png" alt="Logo">
             <h2>Kelurahan Karanganom</h2>
         </div>
         <nav>
@@ -125,30 +54,20 @@
 
     <div class="content">
         <h1>Galeri Foto</h1>
-
         <div class="galeri-grid">
-            <div class="galeri-item"><img src="assets/GOTONG G.jpg" alt="Foto 1" onclick="bukaModal(this.src)"></div>
-            <div class="galeri-item"><img src="assets/MASAK G.jpg" alt="Foto 2" onclick="bukaModal(this.src)"></div>
-            <div class="galeri-item"><img src="assets/masjid g.jpg" alt="Foto 3" onclick="bukaModal(this.src)"></div>
-            <div class="galeri-item"><img src="wayang.jpg" alt="Foto 4" onclick="bukaModal(this.src)"></div>
-            <div class="galeri-item"><img src="assets/kupat 2.jpeg" alt="Foto 5" onclick="bukaModal(this.src)"></div>
+            <div class="galeri-item"><img src="assets/GOTONG G.jpg" onclick="bukaModal(this.src)"></div>
+            <div class="galeri-item"><img src="assets/MASAK G.jpg" onclick="bukaModal(this.src)"></div>
+            <div class="galeri-item"><img src="assets/masjid g.jpg" onclick="bukaModal(this.src)"></div>
+            <div class="galeri-item"><img src="assets/wayang.jpg" onclick="bukaModal(this.src)"></div>
+            <div class="galeri-item"><img src="assets/kupat 2.jpeg" onclick="bukaModal(this.src)"></div>
         </div>
     </div>
 
-    <div id="modalGaleri" onclick="tutupModal()">
-        <img id="imgModal">
-    </div>
+    <div id="modalGaleri" onclick="tutupModal()"><img id="imgModal"></div>
 
     <script>
-        function bukaModal(src) {
-            document.getElementById('modalGaleri').style.display = 'flex';
-            document.getElementById('imgModal').src = src;
-        }
-        function tutupModal() {
-            document.getElementById('modalGaleri').style.display = 'none';
-        }
+        function bukaModal(src) { document.getElementById('modalGaleri').style.display = 'flex'; document.getElementById('imgModal').src = src; }
+        function tutupModal() { document.getElementById('modalGaleri').style.display = 'none'; }
     </script>
-
 </body>
-
 </html>
