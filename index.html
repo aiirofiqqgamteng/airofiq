@@ -8,6 +8,56 @@
     <link rel="icon" href="assets/logo.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* CSS RESPONSIF UNTUK HP */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 95% !important;
+                padding: 0 10px !important;
+            }
+
+            .navbar {
+                flex-direction: column !important;
+                text-align: center !important;
+                gap: 15px !important;
+                padding: 15px 0 !important;
+            }
+
+            /* MENGATUR JARAK AGAR RAPI TANPA MENGUBAH TAMPILAN ASLI */
+            .navbar nav {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+                gap: 10px 20px !important;
+            }
+
+            .stats-container {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 10px !important;
+                margin-top: -20px !important;
+            }
+
+            .card-stat {
+                width: 100% !important;
+                padding: 15px 5px !important;
+            }
+
+            h1 {
+                font-size: 1.6rem !important;
+            }
+
+            h2 {
+                font-size: 1.4rem !important;
+                text-align: center;
+            }
+
+            .hero-text {
+                padding: 10px !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -33,7 +83,6 @@
         <div class="hero-text">
             <h1>Selamat Datang</h1>
             <p>Website Resmi Kecamatan Karanganom</p>
-            <button onclick="salam()">Lihat Informasi</button>
         </div>
     </section>
 
@@ -100,7 +149,6 @@
             <p>&copy; 2026 Kecamatan Karanganom. Seluruh hak cipta dilindungi.</p>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 
