@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeri - Kecamatan Karanganom</title>
-
-    <!-- Ikon Tab Browser -->
     <link rel="shortcut icon" href="assets/logo.png" type="image/png">
 
     <style>
@@ -23,6 +21,7 @@
             min-height: 100vh;
         }
 
+        /* Header & Navigasi */
         header {
             background-color: #004d40;
             color: white;
@@ -64,11 +63,13 @@
             white-space: nowrap;
         }
 
+        /* Konten Galeri */
         .content {
             padding: 40px 20px;
             max-width: 1100px;
             margin: 0 auto;
             flex: 1;
+            width: 100%;
         }
 
         h1 {
@@ -94,27 +95,38 @@
             transition: 0.3s;
         }
 
-        .galeri-item img:hover {
-            transform: scale(1.03);
-        }
+        /* --- PENGUNCI TAMPILAN HP --- */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column !important;
+                padding: 15px 10px !important;
+            }
 
-        #modalGaleri {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            align-items: center;
-            justify-content: center;
-        }
+            .header-left {
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: flex-start !important;
+                align-items: center !important;
+                width: 100% !important;
+                gap: 15px !important;
+                margin-bottom: 15px !important;
+            }
 
-        #imgModal {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 8px;
+            .header-left h2 {
+                font-size: 17px !important;
+            }
+
+            nav {
+                justify-content: center !important;
+                /* DITAMBAHKAN JARAK AGAR RAPI SESUAI LINGKARAN */
+                gap: 12px 25px !important;
+                width: 100% !important;
+                padding: 5px 0 !important;
+            }
+
+            nav a {
+                font-size: 14px !important;
+            }
         }
 
         footer {
@@ -123,18 +135,6 @@
             background: #004d40;
             color: white;
             margin-top: 40px;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-                gap: 15px;
-            }
-
-            nav {
-                justify-content: center;
-            }
         }
     </style>
 </head>
@@ -158,23 +158,17 @@
     <div class="content">
         <h1>Galeri Foto</h1>
         <div class="galeri-grid">
-            <div class="galeri-item"><img src="assets/GOTONG G.jpg" onclick="bukaModal(this.src)"></div>
-            <div class="galeri-item"><img src="assets/MASAK G.jpg" onclick="bukaModal(this.src)"></div>
-            <div class="galeri-item"><img src="assets/masjid g.jpg" onclick="bukaModal(this.src)"></div>
-            <div class="galeri-item"><img src="assets/kupat 2.jpeg" onclick="bukaModal(this.src)"></div>
+            <div class="galeri-item"><img src="assets/GOTONG G.jpg" alt="Foto 1"></div>
+            <div class="galeri-item"><img src="assets/MASAK G.jpg" alt="Foto 2"></div>
+            <div class="galeri-item"><img src="assets/masjid g.jpg" alt="Foto 3"></div>
+            <div class="galeri-item"><img src="assets/kupat 2.jpeg" alt="Foto 4"></div>
         </div>
     </div>
-
-    <div id="modalGaleri" onclick="tutupModal()"><img id="imgModal"></div>
 
     <footer>
         <p>&copy; 2026 Kecamatan Karanganom. Seluruh hak cipta dilindungi.</p>
     </footer>
 
-    <script>
-        function bukaModal(src) { document.getElementById('modalGaleri').style.display = 'flex'; document.getElementById('imgModal').src = src; }
-        function tutupModal() { document.getElementById('modalGaleri').style.display = 'none'; }
-    </script>
 </body>
 
 </html>
