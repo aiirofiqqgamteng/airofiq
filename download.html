@@ -7,6 +7,33 @@
     <title>Pusat Unduhan - Kecamatan Karanganom</title>
     <link rel="icon" href="assets/logo.png" type="image/png">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column !important;
+                text-align: center !important;
+                gap: 15px !important;
+                padding: 15px 0 !important;
+            }
+
+            .navbar .logo {
+                margin-bottom: 10px;
+            }
+
+            /* Mengatur jarak agar rapi sesuai lingkaran */
+            .navbar nav {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+                gap: 10px 20px !important;
+            }
+
+            .navbar nav a {
+                margin-left: 0 !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -36,8 +63,7 @@
                 style="display: block; background-color: #e67e22; color: white; padding: 15px; margin: 20px auto; border-radius: 25px; text-decoration: none; font-weight: bold; max-width: 400px; transition: 0.3s;">
                 Download Flyer Desa
             </a>
-
-            <a href="assets/PEMERINTAH KABUPATEN KLATEN.pdf" download="Pengumuman_Kelurahan_Karanganom.pdf"
+            <a href="assets/PEMERINTAH KABUPATEN KLATEN22.pdf" download="Pengumuman_Kelurahan_Karanganom.pdf"
                 class="btn-download"
                 style="display: block; background-color: #e67e22; color: white; padding: 15px; margin: 20px auto; border-radius: 25px; text-decoration: none; font-weight: bold; max-width: 400px; transition: 0.3s;">
                 Download Pengumuman (Word)
@@ -50,7 +76,6 @@
             <p>&copy; 2026 Kecamatan Karanganom. Seluruh hak cipta dilindungi.</p>
         </div>
     </footer>
-
 </body>
 
 </html>
