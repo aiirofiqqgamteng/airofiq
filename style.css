@@ -1,229 +1,101 @@
-/* --- 1. RESET --- */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="id">
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-    line-height: 1.6;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Kecamatan Karanganom</title>
 
-img {
-    max-width: 100%;
-    display: block;
-}
+    <link rel="shortcut icon" href="assets/logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
 
-/* --- 2. HEADER --- */
-header {
-    background-color: #004d40 !important;
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
+    <style>
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column !important;
+                text-align: center !important;
+                gap: 15px !important;
+                padding: 15px 0 !important;
+            }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+            /* Perbaikan Menu Navigasi agar rapi dan berjarak di HP */
+            .navbar nav {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+                gap: 10px 20px !important;
+            }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
+            .navbar nav a {
+                margin-left: 0 !important;
+            }
+        }
+    </style>
+</head>
 
-.logo img {
-    width: 50px !important;
-    height: 50px !important;
-    object-fit: contain;
-    border-radius: 5px;
-    display: block !important;
-}
+<body>
+    <header>
+        <div class="container navbar" style="display: flex; align-items: center; padding: 10px 20px;">
+            <div class="logo" style="display: flex; align-items: center; gap: 15px;">
+                <img src="assets/logo.png" alt="Logo Kelurahan Karanganom"
+                    style="height: 50px; width: auto; object-fit: contain;">
+                <h2 style="margin: 0;">Kelurahan Karanganom</h2>
+            </div>
 
-.logo h2 {
-    color: #ffffff;
-    font-size: 20px;
-    letter-spacing: 0.5px;
-    margin: 0;
-    line-height: 50px;
-}
+            <nav style="margin-left: auto;">
+                <a href="index.html">Beranda</a>
+                <a href="profil.html">Profil</a>
+                <a href="kegiatan.html">Kegiatan</a>
+                <a href="download.html">Layanan</a>
+                <a href="galeri.html">Galeri</a>
+            </nav>
+        </div>
+    </header>
 
-nav {
-    display: flex;
-    align-items: center;
-}
+    <main class="container">
+        <section class="card-large">
+            <h2>Profil Kecamatan Karanganom</h2>
+            <p>
+                Kecamatan Karanganom merupakan pusat pemerintahan dan pemukiman strategis di Kabupaten Klaten yang
+                dikenal dengan lingkungan asri serta masyarakatnya yang guyub rukun. Lebih dari sekadar administratif,
+                kami memegang teguh semangat gotong royong dan kearifan lokal dalam setiap aspek kehidupan. Saat ini,
+                Karanganom berkomitmen bertransformasi menjadi kawasan yang mandiri secara ekonomi melalui pemberdayaan
+                UMKM, serta terus berinovasi dalam memberikan pelayanan publik yang transparan, efektif, dan berbasis
+                digital demi kesejahteraan seluruh masyarakat.
+            </p>
+        </section>
 
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-left: 25px;
-    font-weight: 500;
-}
+        <section class="card-large">
+            <h2>Kondisi Geografis & Demografi</h2>
+            <p>
+                Secara geografis, Kecamatan Karanganom memiliki wilayah strategis yang mendukung sektor perdagangan
+                lokal, UMKM, dan pertanian terpadu. Dengan jumlah penduduk usia produktif yang dominan, kelurahan ini
+                berkomitmen penuh pada transparansi pelayanan publik serta penguatan kapasitas ekonomi warga.
+            </p>
+        </section>
 
-nav a:hover {
-    color: #80cbc4;
-}
+        <section class="card-large">
+            <h2>Latar Belakang</h2>
+            <p>
+                Pembangunan website ini didasari oleh kebutuhan mendesak masyarakat akan informasi yang cepat, akurat,
+                dan mudah diakses. Seiring dengan perkembangan era digital, Kelurahan Karanganom berkomitmen untuk
+                melakukan transformasi pelayanan publik melalui efisiensi administrasi guna mengurangi antrean di kantor
+                kelurahan.
+            </p>
+            <p>
+                Selain itu, website ini hadir sebagai bentuk transparansi data kegiatan dan pembangunan bagi warga,
+                sekaligus menjadi wadah untuk mempromosikan potensi UMKM lokal secara luas. Dengan adanya platform ini,
+                diharapkan partisipasi masyarakat dalam pembangunan kelurahan dapat meningkat, serta pelayanan dapat
+                berjalan lebih efektif, transparan, dan inklusif bagi seluruh warga.
+            </p>
+        </section>
+    </main>
 
-/* --- 3. HERO --- */
-.hero {
-    position: relative;
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-}
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Kecamatan Karanganom. Seluruh hak cipta dilindungi.</p>
+        </div>
+    </footer>
+</body>
 
-.hero img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-}
-
-.hero-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 77, 64, 0.6);
-    z-index: 1;
-}
-
-.hero-text {
-    position: relative;
-    z-index: 2;
-    padding: 20px;
-}
-
-.hero-text h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.hero-text button {
-    margin-top: 20px;
-    background: #e67e22;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 25px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* --- 4. STATISTIK --- */
-.stats-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 50px 20px;
-    flex-wrap: wrap;
-    margin-top: -50px;
-    position: relative;
-    z-index: 10;
-}
-
-.card-stat {
-    background: white;
-    padding: 30px 20px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    text-align: center;
-    width: 200px;
-}
-
-.card-stat h3 {
-    color: #004d40;
-    font-size: 1.8rem;
-    margin: 10px 0;
-}
-
-.card-stat p {
-    font-size: 0.85rem;
-    color: #666;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-/* --- 5. FOTO KEGIATAN & CONTENT --- */
-.kegiatan-item img,
-.card-large img {
-    width: 100% !important;
-    height: 200px !important;
-    object-fit: cover;
-    border-radius: 10px;
-    display: block;
-}
-
-main {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-h2 {
-    color: #004d40;
-    margin-bottom: 20px;
-    font-size: 1.8rem;
-}
-
-.card-large {
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    margin-bottom: 30px;
-}
-
-footer {
-    text-align: center;
-    padding: 30px;
-    background: #004d40;
-    color: white;
-    margin-top: 50px;
-}
-
-/* --- 6. RESPONSIVE (MEMPERBAIKI FOTO 1 & 2) --- */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px;
-    }
-
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px 20px;
-        width: 100%;
-    }
-
-    nav a {
-        margin-left: 0 !important;
-        font-size: 14px;
-        white-space: nowrap;
-    }
-
-    .hero-text h1 {
-        font-size: 1.8rem;
-    }
-
-    h2 {
-        font-size: 1.5rem !important;
-        text-align: center;
-    }
-}
+</html>
