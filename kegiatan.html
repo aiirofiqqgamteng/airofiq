@@ -5,10 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kegiatan - Kecamatan Karanganom</title>
-
     <link rel="shortcut icon" href="assets/logo.png" type="image/png">
-
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column !important;
+                text-align: center !important;
+                gap: 15px !important;
+                padding: 15px 0 !important;
+            }
+
+            /* Perbaikan Menu Navigasi agar rapi dan berjarak */
+            .navbar nav {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+                gap: 10px 20px !important;
+            }
+
+            .kegiatan-item {
+                flex-direction: column !important;
+                text-align: center;
+            }
+
+            .kegiatan-foto img {
+                width: 100% !important;
+                height: auto !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -18,7 +45,7 @@
             <div class="logo" style="display: flex; align-items: center; gap: 15px;">
                 <img src="assets/logo.png" alt="Logo Kelurahan Karanganom"
                     style="height: 50px; width: auto; object-fit: contain;">
-                <h2 style="margin: 0;">Kelurahan Karanganom</h2>
+                <h2 style="margin: 0;">Kecamatan Karanganom</h2>
             </div>
 
             <nav style="margin-left: auto;">
@@ -35,10 +62,9 @@
         <section class="card-large">
             <h2>Kegiatan & Agenda Masyarakat</h2>
             <p style="text-align: center; margin-bottom: 30px; color: #666;">
-                Dokumentasi dan catatan rangkaian aktivitas dinamis warga serta jajaran pemerintah Kelurahan Karanganom.
+                Dokumentasi dan catatan rangkaian aktivitas dinamis warga serta jajaran pemerintah Kecamatan Karanganom.
             </p>
-
-            <div class="kegiatan-item">
+            <div class="kegiatan-item" style="display: flex; gap: 20px; margin-bottom: 30px;">
                 <div class="kegiatan-foto">
                     <img src="image/umkm.jpg" alt="Pelatihan UMKM Karanganom"
                         onerror="this.src='https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=500'">
@@ -46,12 +72,12 @@
                 <div class="kegiatan-detail">
                     <h3>Pemberdayaan keripik singkong</h3>
                     <p class="kegiatan-tanggal">📅 25 Mei 2026</p>
-                    <p>Kegiatan ini merupakan inisiatif Pemerintah Kelurahan Karanganom untuk meningkatkan daya saing
+                    <p>Kegiatan ini merupakan inisiatif Pemerintah Kecamatan Karanganom untuk meningkatkan daya saing
                         pelaku usaha mikro.</p>
                 </div>
             </div>
 
-            <div class="kegiatan-item">
+            <div class="kegiatan-item" style="display: flex; gap: 20px; margin-bottom: 30px;">
                 <div class="kegiatan-foto">
                     <img src="image/gotong royong.jpg" alt="Kerja Bakti Warga"
                         onerror="this.src='https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=500'">
@@ -64,7 +90,7 @@
                 </div>
             </div>
 
-            <div class="kegiatan-item">
+            <div class="kegiatan-item" style="display: flex; gap: 20px; margin-bottom: 30px;">
                 <div class="kegiatan-foto">
                     <img src="wayang.jpg" alt="Pagelaran Wayang Kulit Karanganom"
                         onerror="this.src='https://images.unsplash.com/photo-1608371945786-d47d3cdd31da?w=500'">
@@ -72,7 +98,7 @@
                 <div class="kegiatan-detail">
                     <h3>Pagelaran Wayang Kulit Tradisi Bersih Desa</h3>
                     <p class="kegiatan-tanggal">📅 22 Maret 2026</p>
-                    <p>Dalam rangka melestarikan adat istiadat leluhur, Pemerintah Kelurahan Karanganom bersama
+                    <p>Dalam rangka melestarikan adat istiadat leluhur, Pemerintah Kecamatan Karanganom bersama
                         masyarakat sukses menggelar wayang kulit.</p>
                 </div>
             </div>
