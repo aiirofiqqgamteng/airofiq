@@ -7,8 +7,30 @@
     <title>Profil - Kecamatan Karanganom</title>
 
     <link rel="shortcut icon" href="assets/logo.png" type="image/png">
-
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column !important;
+                text-align: center !important;
+                gap: 15px !important;
+                padding: 15px 0 !important;
+            }
+
+            /* Perbaikan Menu Navigasi agar rapi dan berjarak di HP */
+            .navbar nav {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+                gap: 10px 20px !important;
+            }
+
+            .navbar nav a {
+                margin-left: 0 !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
